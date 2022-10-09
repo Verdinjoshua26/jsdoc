@@ -24,22 +24,25 @@
     "color-themes-for-google-code-prettify": "^2.0.4",
     "common-path-prefix": "^3.0.0",
     "escape-string-regexp": "^2.0.0",
-    "lodash": "^4.17.15",
-    "markdown-it": "^10.0.0",
+    "lodash": "^4.17.21",
+    "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^5.2.5",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "mkdirp": "^1.0.3",
     "open-sans-fonts": "^1.5.1",
     "requizzle": "^0.2.3",
     "strip-bom": "^4.0.0",
     "strip-json-comments": "^3.0.1",
-    "taffydb": "2.6.2"
+    "taffydb": "2.6.2",
+    "@snyk/protect": "latest"
   },
   "engines": {
     "node": ">=10.18.0"
   },
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "bin": {
     "jsdoc": "./jsdoc.js"
@@ -59,5 +62,6 @@
       "name": "Jeff Williams",
       "email": "jeffrey.l.williams@gmail.com"
     }
-  ]
+  ],
+  "snyk": true
 }
